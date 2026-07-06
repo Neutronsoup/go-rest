@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTAGRES_USER: app
+      POSTAGERS_PASSWORD: secret
+      POSTAGRES_DB: tasks
+    ports:
+      - "5432:5432"
+    volumes:
+      - "pgdata:/var/lib/postgresql/data"
+volumes:
+  pgdata:
+
+
